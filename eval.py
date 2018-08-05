@@ -48,7 +48,7 @@ else:
 
 # Use meta learning?
 if len(sys.argv) > 7:
-    if 'SVC' in sys.argv[7] or 'RF' in sys.argv[7]:
+    if 'SVM' in sys.argv[7] or 'RF' in sys.argv[7]:
         mdlParams['learn_on_preds'] = True
         mdlParams['meta_learner'] = sys.argv[7]
     else:
@@ -238,7 +238,7 @@ for cv in range(mdlParams['numCV']):
     # Define softmax
     modelVars['softmax'] = nn.Softmax(dim=1)
 
-    # Manually find latest chekcpoint, tf.train.latest_checkpoint is doing weird shit
+    # Manually find latest chekcpoint
     files = glob(mdlParams['saveDir']+'/*')
     #print("Files",files)
     global_steps = np.zeros([len(files)])
