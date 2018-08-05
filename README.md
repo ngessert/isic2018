@@ -25,9 +25,9 @@ We included two example config files for full training and 5-Fold CV. More detai
 
 ### Evaluate a model 
 
-For model evaluation, there are multiple options. First, a 5-Fold CV model can be evaluated on each held out split, optionally with a meta learner applied on top. The meta learner is evaluated by splitting the validation split once again into 10 sub splits. For evaluation, run: `python eval.py example ISIC.example_senet_5foldcv multiorder36 average /home/Gessert/data/isic/ISIC.example_senet_5foldcv best SVC` 
+For model evaluation, there are multiple options. First, a 5-Fold CV model can be evaluated on each held out split, optionally with a meta learner applied on top. The meta learner is evaluated by splitting the validation split once again into 10 sub splits. For evaluation, run: `python eval.py example ISIC.example_senet_5foldcv multiorder36 average /home/Gessert/data/isic/ISIC.example_senet_5foldcv best SVM` 
 
-`multiorder36` indicate that ordered, multi-crop evaluation with 36 crops should be performed. Always use 9, 16, 25, 36, 49... etc. number of crops. `average` indicates the predictions should be averaged over the crops (can also be `vote`). `best` indicates that the best model obtained during training should be used. Can be `last` to use the last model saved. `SVC` indicates meta learning with a support vector machine. Can be `RF` for random forests instead.
+`multiorder36` indicate that ordered, multi-crop evaluation with 36 crops should be performed. Always use 9, 16, 25, 36, 49... etc. number of crops. `average` indicates the predictions should be averaged over the crops (can also be `vote`). `best` indicates that the best model obtained during training should be used. Can be `last` to use the last model saved. `SVM` indicates meta learning with a support vector machine. Can be `RF` for random forests instead.
 
 If final predictions on new, unlabeled images should be performed, add the path to said images at the end of the evaluation call: `python eval.py example ISIC.example_senet_5foldcv multiorder36 average /home/Gessert/data/isic/ISIC.example_senet_5foldcv best SVC /home/Gessert/data/isic/task3/images/Validation` 
 
