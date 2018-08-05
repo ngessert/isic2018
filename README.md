@@ -13,7 +13,7 @@ Here, we explain the basic usage of our code to reproduce our results. We will k
 
 The images' and labels' directory strucutre should look like this: /task3/images/HAM10000/ISIC_0024306.jpg and /task3/labels/HAM10000/labels.csv. The labels in the CSV file should be structured as follows: first column contains the image ID ("ISIC_0024306"), then the one-hot encoded labels follow.
 
-We also considered the dataset we named "ISIC_Rest" which contains images from the official ISIC archive. The corresponding CSV file in this repositroy indactes the images that were included. 
+We also considered the dataset we named "ISIC_Rest" which contains images from the official ISIC archive. The corresponding CSV file in this repositroy indicates the images that were included. 
 
 Our split for training/validation with 5-Fold CV is included in the "indices_new.pkl" file. This should be placed in the same directory as /task3. Note that we do not use a test set.
 
