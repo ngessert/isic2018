@@ -3,7 +3,7 @@ Code for the ISIC2018 Lesion Diagnosis Challenge (Task 3)
 
 Our team achieved second place while being the best approach using only publicly available data ([Leaderboards](https://challenge2018.isic-archive.com/leaderboards/)).
 
-Associated arxiv submission: 
+Associated arxiv paper: https://arxiv.org/abs/1808.01694
 
 ## Usage
 
